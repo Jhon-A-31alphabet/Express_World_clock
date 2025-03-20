@@ -1,11 +1,8 @@
 import { Router } from "express";
-
 import axios from "axios";
-
+ 
 
 const router = Router()
-
-
 
 router.get('/',(req,res) => {
 
@@ -13,17 +10,11 @@ router.get('/',(req,res) => {
 
 });
 
-
 router.get('/:Continent/:country', async (req, res) => {
-
-
     let continent = req.params.Continent;
-
     let country = req.params.country;
-
- 
-
     let location = `${continent}/${country}`;
+
 
     try {
 
@@ -35,15 +26,9 @@ router.get('/:Continent/:country', async (req, res) => {
 
       res.render("index",{Country__: country,date:request.data["date"],time:request.data["time"] , timezone:request.data["timeZone"]});
 
- 
-
-   
 
     } catch (error) {
-
-      console.error('Error al obtener la hora:', error);
-
-      res.status(500).send('Error al obtener la hora');
+      res.status(500).send('Can not get the time');
 
     }
 
