@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express Wolrd Time Clock</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+
     <div>
       
         <h1>Region:  <%= Country__ %> </h1>
@@ -18,12 +20,36 @@
 
     </div>
 
-    <p>
-        <button onclick="location.href='/America/Santo_Domingo'">Santo Domingo</button>
-        <button onclick="location.href='/Europe/Madrid'">Madrid</button>
+<div id="container">
+    <div class="continent_div">
+        <strong><h2>America</h2><br></strong>
+
+        <button onclick="location.href='/America/Santo_Domingo'">Santo Domingo</button><br><br>
+        <button onclick="location.href='/America/Buenos_Aires'">Buenos Aires</button><br><br>
+        <button onclick="location.href='/America/Caracas'">Caracas</button><br><br>
+        <button onclick="location.href='/America/Bogota'">Bogotá</button><br><br>
+        <button onclick="location.href='/America/Lima'">Lima</button><br><br>
+        <button onclick="location.href='/America/Mexico_City'">Ciudad de México</button><br><br>
+        <button onclick="location.href='/America/Brasilia'">Brasilia</button><br><br>
+        <button onclick="location.href='/America/Havana'">La Habana</button><br><br>
+
+    </div>
+    <div class="continent_div">
+        <h2>Europa</h2><br>
+        <button onclick="location.href='/Europe/Madrid'">Madrid</button><br><br>
+        <button onclick="location.href='/Europe/Paris'">París</button><br><br>
+        <button onclick="location.href='/Europe/Berlin'">Berlín</button><br><br>
+        <button onclick="location.href='/Europe/Rome'">Roma</button><br><br>
+        <button onclick="location.href='/Europe/London'">Londres</button><br><br>
+        <button onclick="location.href='/Europe/Vienna'">Viena</button><br><br>
+        <button onclick="location.href='/Europe/Amsterdam'">Ámsterdam</button><br><br>
+        <button onclick="location.href='/Europe/Lisbon'">Lisboa</button><br><br>
+    </div>
+    <div class="continent_div">
         <button onclick="location.href='/Asia/Tokyo'">Tokyo</button>
         <button onclick="location.href='/Africa/Cairo'">Cairo</button>
-    </p>
+    </div>
+</div>
 
   
     
