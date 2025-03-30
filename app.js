@@ -1,12 +1,15 @@
 import express from 'express'
 import indexRoutes from "./routes/routes.js"; 
 import { join, dirname } from "path";
+import path from 'path';
 import { fileURLToPath } from "url";
 import cors from "cors";
 import morgan from 'morgan';
+
+
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
 
 const app = express()
 
@@ -21,6 +24,8 @@ app.use(express.static('public', {
         }
     }
 }));
+
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 
 app.use(cors());
 app.use(morgan('dev'))
