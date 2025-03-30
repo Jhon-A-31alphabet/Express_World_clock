@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { request, Router } from "express";
 
 import axios from "axios";
 
@@ -13,41 +13,34 @@ router.get('/',(req,res) => {
 
 });
 
-
 router.get('/:Continent/:country', async (req, res) => {
 
+  let continent = req.params.Continent;
+  let country = req.params.country;
 
-    let continent = req.params.Continent;
-
-    let country = req.params.country;
-
- 
-
-    let location = `${continent}/${country}`;
-
-    try {
+  let location = `${continent}/${country}`;
 
 
-      let request = await axios.get(`https://timeapi.io/api/Time/current/zone?timeZone=${location}`);
+  try {
 
-      console.log(request.data["dateTime"]);
-
-
-      res.render("index",{Country__: country,date:request.data["date"],time:request.data["time"] , timezone:request.data["timeZone"]});
-
- 
-
+    let request = await axios.get(`https://timeapi.io/api/Time/current/zone?timeZone=${location}`);
    
+    res.render("index",{Country__: country,date:request.data["date"],time:request.data["time"]});
 
-    } catch (error) {
+    console.log(request.data["dateTime"]);
 
-      console.error('Error al obtener la hora:', error);
 
-      res.status(500).send('Error al obtener la hora');
+  } catch (error) {
 
-    }
 
-  });
+    console.error('Error al obtener la hora:', error);
+    res.status(500).send('Error al obtener la hora');
+
+
+  }
+
+});
+
 
 
 

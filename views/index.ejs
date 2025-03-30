@@ -8,14 +8,15 @@
 </head>
 <body>
 
+    <h1>Express Wolrd Clock</h1><br>
+
     <div>
       
-        <h1>Region:  <%= Country__ %> </h1>
-
-        <strong><h2> Date :  <%= date %> </h2></strong>
+        <h1>Current time in   <%= Country__ %> </h1>
         <strong><h2> Time :  <%= time %> </h2></strong>
 
-       <strong> <h2>Time zone: <%= timezone %>  </h2></strong>
+        <strong><h2> Date :  <%= date %> </h2></strong>
+
 
 
     </div>
@@ -30,12 +31,11 @@
         <button onclick="location.href='/America/Bogota'">Bogotá</button><br><br>
         <button onclick="location.href='/America/Lima'">Lima</button><br><br>
         <button onclick="location.href='/America/Mexico_City'">Ciudad de México</button><br><br>
-        <button onclick="location.href='/America/Brasilia'">Brasilia</button><br><br>
         <button onclick="location.href='/America/Havana'">La Habana</button><br><br>
 
     </div>
     <div class="continent_div">
-        <h2>Europa</h2><br>
+        <h2>Europe</h2><br>
         <button onclick="location.href='/Europe/Madrid'">Madrid</button><br><br>
         <button onclick="location.href='/Europe/Paris'">París</button><br><br>
         <button onclick="location.href='/Europe/Berlin'">Berlín</button><br><br>
@@ -46,12 +46,29 @@
         <button onclick="location.href='/Europe/Lisbon'">Lisboa</button><br><br>
     </div>
     <div class="continent_div">
+        <h2>Asia</h2>
         <button onclick="location.href='/Asia/Tokyo'">Tokyo</button>
+    
         <button onclick="location.href='/Africa/Cairo'">Cairo</button>
+    </div>
+
+    <div class="continent_div">
+        
+        <h2>Africa</h2>
+    <button onclick="location.href='/Africa/Cairo'">Cairo</button>
     </div>
 </div>
 
   
-    
+<script>document.addEventListener('DOMContentLoaded', function() {
+    function refreshroute() {
+        location.reload(); 
+    }
+
+    setInterval(refreshroute, 60000);
+});</script>
+
 </body>
+
+
 </html>
