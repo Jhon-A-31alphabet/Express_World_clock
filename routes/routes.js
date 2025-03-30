@@ -29,10 +29,6 @@ router.get('/:Continent/:country', async (req, res) => {
     res.render("index",{Country__: country,date:request.data["date"],time:request.data["time"]});
 
     console.log(request.data["dateTime"]);
-
-
-      res.render("index",{Country__: country,date:request.data["date"],time:request.data["time"] , timezone:request.data["timeZone"]});
-
  
 
    
