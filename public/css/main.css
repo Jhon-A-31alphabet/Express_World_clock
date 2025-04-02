@@ -1,19 +1,29 @@
 
+body{
+    background-color: #fff;
+}
+
 #navbar_{
-    padding: 10px;
+    padding-top: 1%;
+    padding-left: 2%;
     background-color: white;
+    border-bottom: none;
 }
 
 button{
     margin-right: 15px;
-    margin-left: 15px;
+    margin-left: 10px;
+    height: 4em;
 }
 
 #Home_description{
-    
-    border:2px solid  red ;
+
+    font-family: 'Courier New', Courier, monospace;
+    border:2px solid  black ;
     border-radius: 2px;
-    background-color: red;
-    color: white
+    background-color: #ee5577;
+    color: white;
+    width: 12em;
+    height: 100%;
 
 }
