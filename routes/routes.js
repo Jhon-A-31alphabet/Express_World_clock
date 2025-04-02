@@ -26,9 +26,8 @@ router.get('/:Continent/:country', async (req, res) => {
 
     } catch (error) {
       res.status(500).send('Can not get the time');
-
-
-  }
+  
+    }
 
 });
 

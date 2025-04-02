@@ -1,2 +1,19 @@
 
+#navbar_{
+    padding: 10px;
+    background-color: white;
+}
 
+button{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#Home_description{
+    
+    border:2px solid  red ;
+    border-radius: 2px;
+    background-color: red;
+    color: white
+
+}

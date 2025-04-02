@@ -3,8 +3,8 @@ import indexRoutes from "./routes/routes.js";
 import { join, dirname } from "path";
 import path from 'path';
 import { fileURLToPath } from "url";
-import cors from "cors";
 import morgan from 'morgan';
+import cors from "cors";
 
 
 
@@ -27,9 +27,8 @@ app.use(express.static('public', {
 
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 
-app.use(cors());
 app.use(morgan('dev'))
-
+app.use(cors("http://localhost:3000"))
 app.use(indexRoutes);
 
 app.listen(process.env.PORT|| 3000,()=>{
