@@ -12,18 +12,32 @@ body{
 
 button{
     margin-right: 15px;
-    margin-left: 10px;
-    height: 4em;
+    margin-left: 20px;
+    height: auto;
 }
 
-#Home_description{
+h3{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-    font-family: 'Courier New', Courier, monospace;
-    border:2px solid  black ;
-    border-radius: 2px;
-    background-color: #ee5577;
-    color: white;
-    width: 12em;
-    height: 100%;
 
+h1{
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h2{
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.Info{
+    margin-top: 15%;
+    text-align: center;
 }

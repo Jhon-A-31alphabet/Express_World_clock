@@ -1,37 +1,38 @@
 import { Router } from "express";
-import axios from "axios";
  
 
 const router = Router()
 
+
+
+router.get('/:continent/:country', async (req, res) => {
+
+
+  const continent = req.params.continent;
+  const country = req.params.country;
+  const location = `${continent}/${country}`;
+
+  try {
+      const response = await fetch(`https://timeapi.io/api/Time/current/zone?timeZone=${location}`);
+      
+      if (!response.ok) {
+        throw new Error(`Error fetching data: ${response.statusText}`);
+      }
+      
+      const data = await response.json(); 
+
+      res.render("index", { Country: country, date: data["date"], time: data["time"] });
+  } catch (error) {
+      console.error(error);
+      res.status(500).send("Can not fetch the time");
+  }
+});
+
+
 router.get('/',(req,res) => {
 
-    res.redirect("/America/Santo_domingo");
+  res.redirect("/America/Santo_Domingo");
 
 });
-
-router.get('/:Continent/:country', async (req, res) => {
-    let continent = req.params.Continent;
-    let country = req.params.country;
-    let location = `${continent}/${country}`;
-
-
-
-    try {
-
-    let request = await axios.get(`https://timeapi.io/api/Time/current/zone?timeZone=${location}`);
-   
-    res.render("index",{Country__: country,date:request.data["date"],time:request.data["time"]});
-
-
-    } catch (error) {
-      res.status(500).send('Can not get the time');
-  
-    }
-
-});
-
-
-
 
 export default router;

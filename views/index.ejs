@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express Wolrd Time Clock</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
 
@@ -14,7 +19,7 @@
 
 <ul id="navbar_"class="nav nav-tabs">
     <li class="nav-item">
-    <h3 id="Home_description">Express Wolrd Clock</h3>
+    <h3>Express Wolrd Clock</h3>
     </li>
         <li class="nav-item dropdown">
             <button id="america_button" class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">America</button>
@@ -63,9 +68,9 @@
 
 
 
-    <div>
+    <div class="Info">
       
-        <h1>Current time in   <%= Country__ %> </h1>
+        <h1>Current time in   <%= Country %> </h1>
         <strong><h2> Time :  <%= time %>  24H</h2></strong>
 
         <strong><h2> Date :  <%= date %> </h2></strong>
@@ -73,7 +78,7 @@
 
 
     </div>
-</div>
+
 
 
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
