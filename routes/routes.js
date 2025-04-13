@@ -55,4 +55,10 @@ router.get('/',(req,res) => {
 
 });
 
+
+
+router.get('/IsAlive',(req,res)=>{
+  res.redirect("/");
+})
+
 export default router;

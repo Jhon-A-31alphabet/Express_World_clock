@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express Wolrd Time Clock</title>
+    <title>Express Wolrd  Clock</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,11 +11,10 @@
     
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
+    
 
 </head>
 <body>
-
-
 
 <ul id="navbar_"class="nav nav-tabs">
     <li class="nav-item">
@@ -24,33 +23,46 @@
         <li class="nav-item dropdown">
             <button id="america_button" class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">America</button>
             <ul class="dropdown-menu">
+
                 <li><a  class="dropdown-item"  onclick="location.href='/America/Santo_Domingo'">Santo Domingo</a></li>
                 <li><a  class="dropdown-item" onclick="location.href='/America/Havana'">Havana</a></li>
                 <li><a class="dropdown-item"  onclick="location.href='/America/Buenos_Aires'">Buenos Aires</a></li>
                 <li><a class="dropdown-item"  onclick="location.href='/America/Caracas'">Caracas</a></li>
                 <li><a class="dropdown-item"  onclick="location.href='/America/Bogota'">Bogota</a></li>
+                <li><a class="dropdown-item"  onclick="location.href='/America/Chicago'">Chicago</a></li>
+                <li><a class="dropdown-item"  onclick="location.href='/America/Detroit'">Detroit</a></li>
+                <li><a class="dropdown-item"  onclick="location.href='/America/Jamaica'">Jamaica</a></li>
+                <li><a class="dropdown-item"  onclick="location.href='/America/Dominica'">Dominica</a></li>
+                <li><a class="dropdown-item"  onclick="location.href='/America/Lima'">Lima</a></li>
+
             </ul>
         </li>
      
         <li class="nav-item dropdown">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Europa</button>
+            <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Europa</button>
             <ul class="dropdown-menu">
-            <li><a class="dropdown-item"location.href='/Europe/Madrid'">Madrid</a></li>
-            <li><a  class="dropdown-item" onclick="location.href='/Europe/Paris'">París</a></li>
-            <li><a  class="dropdown-item" onclick="location.href='/Europe/Berlin'">Berlín</a></li>
-            <li> <a  class="dropdown-item" onclick="location.href='/Europe/Rome'">Roma</a></li>
-            <li> <a  class="dropdown-item" onclick="location.href='/Europe/London'">Londres</a></li>
-            <li> <a  class="dropdown-item" onclick="location.href='/Europe/Vienna'">Viena</a></li>
-            <li> <a  class="dropdown-item" onclick="location.href='/Europe/Amsterdam'">Ámsterdam</a></li>
-            <li><a  class="dropdown-item" onclick="location.href='/Europe/Lisbon'">Lisboa</a></li>
+            <li><a class="dropdown-item" onclick= "location.href='/Europe/Madrid'">Madrid</a></li>
+            <li><a  class="dropdown-item" onclick= "location.href='/Europe/Paris'">París</a></li>
+            <li><a  class="dropdown-item" onclick= "location.href='/Europe/Berlin'">Berlín</a></li>
+            <li> <a  class="dropdown-item" onclick= "location.href='/Europe/Rome'">Roma</a></li>
+            <li> <a  class="dropdown-item" onclick= "location.href='/Europe/London'">Londres</a></li>
+            <li> <a  class="dropdown-item" onclick= "location.href='/Europe/Vienna'">Viena</a></li>
+            <li> <a  class="dropdown-item" onclick= "location.href='/Europe/Amsterdam'">Ámsterdam</a></li>
+            <li><a  class="dropdown-item" onclick= "location.href='/Europe/Lisbon'">Lisboa</a></li>
             </ul>
         </li>
         
         <li class="nav-item dropdown">
+
             <button class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Asia</button>
             <ul class="dropdown-menu">
             <li><a  class="dropdown-item" onclick="location.href='/Asia/Tokyo'">Tokyo</a></li>
-        
+            <li><a class="dropdown-item" onclick="location.href='/Asia/Kabul'">Kabul</a></li>
+            <li><a class="dropdown-item" onclick="location.href='/Asia/Bangkok'">Bangkok</a></li>
+            <li><a class="dropdown-item" onclick="location.href='/Asia/Dubai'">Dubai</a></li>
+            <li><a class="dropdown-item" onclick="location.href='/Asia/Hong_Kong'">Hong Kong</a></li>
+            <li><a class="dropdown-item" onclick="location.href='/Asia/Seoul'">Seoul</a></li>
+
             </ul>
         </li>
 
@@ -61,12 +73,21 @@
             
             <li>
             <a  class="dropdown-item" onclick="location.href='/Africa/Cairo'">Cairo</a>
+            <a  class="dropdown-item" onclick="location.href='/Africa/Accra'">Accra</a>
+            <a  class="dropdown-item" onclick="location.href='/Africa/Banjul'">Banjul</a>
+            <a  class="dropdown-item" onclick="location.href='/Africa/Bamako'">Bamako</a>
+            <a  class="dropdown-item" onclick="location.href='/Africa/Dakar'">Dakar</a>
+            <a  class="dropdown-item" onclick="location.href='/Africa/Luanda'">Luanda</a>
+            <a  class="dropdown-item" onclick="location.href='/Africa/Adak'">Adak</a>
+
+
             </li>
             </ul>
         </li>
+
+        <button class="btn btn-dark" type="button" id="l_d_button" onclick="change_background()">Dark</button>
+
 </ul>
-
-
 
     <div class="Info">
       
@@ -82,13 +103,21 @@
 
 
 <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>document.addEventListener('DOMContentLoaded', function() {
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
     function refreshroute() {
         location.reload(); 
     }
 
     setInterval(refreshroute, 60000);
-});</script>
+});
+
+
+
+</script>
+<script src="/JS/index.js"></script>
 </body>
 
 
