@@ -18,7 +18,7 @@
 
 <ul id="navbar_"class="nav nav-tabs">
     <li class="nav-item">
-    <h3>Express Wolrd Clock</h3>
+    <h3 id="NAME">Express Wolrd Clock</h3>
     </li>
         <li class="nav-item dropdown">
             <button id="america_button" class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">America</button>
@@ -85,18 +85,17 @@
             </ul>
         </li>
 
-        <button class="btn btn-dark" type="button" id="l_d_button" onclick="change_background()">Dark</button>
+        <button class="btn btn-dark" type="button" id="l_d_button" onclick="change_styles()">Dark</button>
+
 
 </ul>
 
     <div class="Info">
       
-        <h1>Current time in   <%= Country %> </h1>
-        <strong><h2> Time :  <%= time %>  24H</h2></strong>
+        <h1 id="Current">Current time in   <%= Country %> </h1>
+        <strong><h2 id="Time"> Time :  <%= time %>  24H</h2></strong>
 
-        <strong><h2> Date :  <%= date %> </h2></strong>
-
-
+        <strong><h2 id="Date"> Date :  <%= date %> </h2></strong>
 
     </div>
 

@@ -24,9 +24,10 @@ async function fetchWithRetry(url, options, retries = 3) {
 router.get('/:continent/:country', async (req, res) => {
   
 
-  const continent = req.params.continent;
-  const country = req.params.country;
-  const location = `${continent}/${country}`;
+  let continent = req.params.continent;
+  let country = req.params.country;
+
+  let location = `${continent}/${country}`;
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 5000);
@@ -40,6 +41,7 @@ router.get('/:continent/:country', async (req, res) => {
       }
       
       const data = await response.json(); 
+
 
       res.render("index", { Country: country, date: data["date"], time: data["time"] });
   } catch (error) {
