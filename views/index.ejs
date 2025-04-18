@@ -1,6 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express Wolrd  Clock</title>
@@ -15,79 +17,82 @@
 
 </head>
 <body>
-
-<ul id="navbar_"class="nav nav-tabs">
-    <li class="nav-item">
-    <h3 id="NAME">Express Wolrd Clock</h3>
-    </li>
-        <li class="nav-item dropdown">
-            <button id="america_button" class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">America</button>
-            <ul class="dropdown-menu">
-
-                <li><a  class="dropdown-item"  onclick="location.href='/America/Santo_Domingo'">Santo Domingo</a></li>
-                <li><a  class="dropdown-item" onclick="location.href='/America/Havana'">Havana</a></li>
-                <li><a class="dropdown-item"  onclick="location.href='/America/Buenos_Aires'">Buenos Aires</a></li>
-                <li><a class="dropdown-item"  onclick="location.href='/America/Caracas'">Caracas</a></li>
-                <li><a class="dropdown-item"  onclick="location.href='/America/Bogota'">Bogota</a></li>
-                <li><a class="dropdown-item"  onclick="location.href='/America/Chicago'">Chicago</a></li>
-                <li><a class="dropdown-item"  onclick="location.href='/America/Detroit'">Detroit</a></li>
-                <li><a class="dropdown-item"  onclick="location.href='/America/Jamaica'">Jamaica</a></li>
-                <li><a class="dropdown-item"  onclick="location.href='/America/Dominica'">Dominica</a></li>
-                <li><a class="dropdown-item"  onclick="location.href='/America/Lima'">Lima</a></li>
-
-            </ul>
-        </li>
-     
-        <li class="nav-item dropdown">
-            <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Europa</button>
-            <ul class="dropdown-menu">
-            <li><a class="dropdown-item" onclick= "location.href='/Europe/Madrid'">Madrid</a></li>
-            <li><a  class="dropdown-item" onclick= "location.href='/Europe/Paris'">París</a></li>
-            <li><a  class="dropdown-item" onclick= "location.href='/Europe/Berlin'">Berlín</a></li>
-            <li> <a  class="dropdown-item" onclick= "location.href='/Europe/Rome'">Roma</a></li>
-            <li> <a  class="dropdown-item" onclick= "location.href='/Europe/London'">Londres</a></li>
-            <li> <a  class="dropdown-item" onclick= "location.href='/Europe/Vienna'">Viena</a></li>
-            <li> <a  class="dropdown-item" onclick= "location.href='/Europe/Amsterdam'">Ámsterdam</a></li>
-            <li><a  class="dropdown-item" onclick= "location.href='/Europe/Lisbon'">Lisboa</a></li>
-            </ul>
-        </li>
-        
-        <li class="nav-item dropdown">
-
-            <button class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Asia</button>
-            <ul class="dropdown-menu">
-            <li><a  class="dropdown-item" onclick="location.href='/Asia/Tokyo'">Tokyo</a></li>
-            <li><a class="dropdown-item" onclick="location.href='/Asia/Kabul'">Kabul</a></li>
-            <li><a class="dropdown-item" onclick="location.href='/Asia/Bangkok'">Bangkok</a></li>
-            <li><a class="dropdown-item" onclick="location.href='/Asia/Dubai'">Dubai</a></li>
-            <li><a class="dropdown-item" onclick="location.href='/Asia/Hong_Kong'">Hong Kong</a></li>
-            <li><a class="dropdown-item" onclick="location.href='/Asia/Seoul'">Seoul</a></li>
-
-            </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Africa</button>
-            <ul class="dropdown-menu">
-            
-            <li>
-            <a  class="dropdown-item" onclick="location.href='/Africa/Cairo'">Cairo</a>
-            <a  class="dropdown-item" onclick="location.href='/Africa/Accra'">Accra</a>
-            <a  class="dropdown-item" onclick="location.href='/Africa/Banjul'">Banjul</a>
-            <a  class="dropdown-item" onclick="location.href='/Africa/Bamako'">Bamako</a>
-            <a  class="dropdown-item" onclick="location.href='/Africa/Dakar'">Dakar</a>
-            <a  class="dropdown-item" onclick="location.href='/Africa/Luanda'">Luanda</a>
-
-
-            </li>
-            </ul>
-        </li>
-
-        <button class="btn btn-dark" type="button" id="l_d_button" onclick="change_styles()">Dark</button>
-
-
-</ul>
+    <nav id="navbar_" class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="NAME">Express World Clock</a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <li class="nav-item dropdown">
+                        <a id="america_button" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            America
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="location.href='/America/Santo_Domingo'">Santo Domingo</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Havana'">Havana</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Buenos_Aires'">Buenos Aires</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Caracas'">Caracas</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Bogota'">Bogota</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Chicago'">Chicago</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Detroit'">Detroit</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Jamaica'">Jamaica</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Dominica'">Dominica</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/America/Lima'">Lima</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Europa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="location.href='/Europe/Madrid'">Madrid</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Europe/Paris'">París</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Europe/Berlin'">Berlín</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Europe/Rome'">Roma</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Europe/London'">Londres</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Europe/Vienna'">Viena</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Europe/Amsterdam'">Ámsterdam</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Europe/Lisbon'">Lisboa</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Asia
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="location.href='/Asia/Tokyo'">Tokyo</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Asia/Kabul'">Kabul</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Asia/Bangkok'">Bangkok</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Asia/Dubai'">Dubai</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Asia/Hong_Kong'">Hong Kong</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Asia/Seoul'">Seoul</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Africa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="location.href='/Africa/Cairo'">Cairo</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Africa/Accra'">Accra</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Africa/Banjul'">Banjul</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Africa/Bamako'">Bamako</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Africa/Dakar'">Dakar</a></li>
+                            <li><a class="dropdown-item" onclick="location.href='/Africa/Luanda'">Luanda</a></li>
+                        </ul>
+                    </li>
+                </ul> <button class="btn btn-dark ms-md-2" type="button" id="l_d_button" onclick="change_styles()">Dark</button>
+                 
+            </div> 
+        </div> 
+    </nav>
+    
 
     <div class="Info">
       
