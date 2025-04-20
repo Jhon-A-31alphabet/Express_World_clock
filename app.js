@@ -19,9 +19,10 @@ app.use(express.static('public', {
         }
     }
 }));
-app.use(morgan('tiny'))
 
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+app.use(morgan('tiny'))
+
 app.use(indexRoutes);
 
 
