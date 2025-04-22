@@ -1,6 +1,7 @@
 
 body{
     background-color: #fff;
+    
 }
 
 #navbar_{
@@ -52,3 +53,8 @@ h2{
   left: 90%;
 }
 
+#footer__{
+  width:  100%;
+  position: fixed;
+  bottom: 0;
+}
