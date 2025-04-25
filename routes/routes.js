@@ -9,7 +9,7 @@ function delete__(Name_){
   return Name_.replace("_", " ")  // delete _ and replace _ with " "
 }
 
-async function fetchWithRetry(url, options, retries = 5) {  //retry the http request if  the api thow an error
+async function fetchWithRetry(url, options, retries = 10) {  //retry the http request if  the api thow an error
   
   for (let i = 0; i < retries; i++) {
       try {
